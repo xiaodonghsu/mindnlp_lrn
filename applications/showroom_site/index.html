@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>展厅公司业务 · 总览-分项目详细</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="panel-right">
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">展厅公司业务介绍</p>
+      <h1>总览 - 分项目详细浏览</h1>
+      <p class="subtitle">滚动、点击即可切换项目画面，并进入项目主页。</p>
+    </div>
+    <div class="status-pill">
+      <span class="pulse"></span>
+      讲解模式已开启
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="overview">
+      <div class="preview-panel">
+        <div class="preview-card">
+          <div class="preview-media">
+            <img id="preview-image" src="assets/project-a.svg" alt="项目预览" />
+          </div>
+          <div class="preview-info">
+            <h2 id="preview-title">智慧展厅 · 互动引导</h2>
+            <p id="preview-desc">面向参观者的沉浸式互动入口，集中展示公司全线业务能力。</p>
+          </div>
+        </div>
+        <div class="preview-actions">
+          <button class="primary" id="jump-detail">进入当前项目主页</button>
+          <button class="ghost" id="back-overview" disabled>已在概览页</button>
+        </div>
+      </div>
+
+      <aside class="selector-panel">
+        <div class="selector-header">
+          <div>
+            <h3>项目滚动选择</h3>
+            <p>项目经过中线即可预览，点击进入详情。</p>
+          </div>
+          <button class="swap" id="toggle-panel" type="button">发送到左侧</button>
+        </div>
+
+        <div class="scroll-wrapper">
+          <div class="center-marker">
+            <span>当前焦点</span>
+          </div>
+          <div class="scroll-list" id="scroll-list" role="listbox" aria-label="项目选择列表">
+            <button class="scroll-item active" data-index="0" data-id="project-a" type="button" role="option" aria-selected="true">
+              <span class="name">智慧展厅 · 互动引导</span>
+              <span class="meta">沉浸式导览</span>
+            </button>
+            <button class="scroll-item" data-index="1" data-id="project-b" type="button" role="option" aria-selected="false">
+              <span class="name">项目 B · 数字孪生</span>
+              <span class="meta">实时数据可视化</span>
+            </button>
+            <button class="scroll-item" data-index="2" data-id="project-c" type="button" role="option" aria-selected="false">
+              <span class="name">项目 C · AI 讲解</span>
+              <span class="meta">智能讲解员</span>
+            </button>
+            <button class="scroll-item" data-index="3" data-id="project-d" type="button" role="option" aria-selected="false">
+              <span class="name">项目 D · 智慧交互</span>
+              <span class="meta">多屏互动控制</span>
+            </button>
+            <button class="scroll-item" data-index="4" data-id="project-e" type="button" role="option" aria-selected="false">
+              <span class="name">项目 E · 未来展区</span>
+              <span class="meta">沉浸影像体验</span>
+            </button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="project-detail" class="detail">
+      <div class="detail-header">
+        <div>
+          <p class="eyebrow">项目主页</p>
+          <h2 id="detail-title">智慧展厅 · 互动引导</h2>
+          <p id="detail-desc">多媒体交互与讲解方案，适合大型展厅的开场总览区。</p>
+        </div>
+        <div class="detail-tags" id="detail-tags"></div>
+      </div>
+
+      <div class="detail-body">
+        <div class="detail-media">
+          <img id="detail-image" src="assets/project-a.svg" alt="项目主页图片" />
+          <div class="detail-video">
+            <div class="video-overlay">
+              <span>演示视频</span>
+              <button type="button">播放</button>
+            </div>
+          </div>
+        </div>
+        <div class="detail-notes">
+          <h3>讲解提示</h3>
+          <ul id="detail-points"></ul>
+        </div>
+      </div>
+
+      <div class="detail-actions">
+        <button class="ghost" id="prev-project">上一页</button>
+        <button class="ghost" id="next-project">下一页</button>
+        <button class="primary" id="return-overview">返回概览</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

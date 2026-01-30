@@ -1,0 +1,13 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="36" fill="url(#bg)"/>
+  <rect x="80" y="120" width="220" height="300" rx="24" fill="white" fill-opacity="0.15"/>
+  <rect x="320" y="160" width="500" height="60" rx="18" fill="white" fill-opacity="0.2"/>
+  <rect x="320" y="250" width="380" height="50" rx="16" fill="white" fill-opacity="0.18"/>
+  <text x="60" y="90" font-size="28" fill="white" font-family="Arial, Helvetica, sans-serif" opacity="0.95">项目 B · 数字孪生</text>
+</svg>

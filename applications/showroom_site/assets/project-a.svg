@@ -1,0 +1,13 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" rx="36" fill="url(#bg)"/>
+  <circle cx="730" cy="140" r="90" fill="white" fill-opacity="0.15"/>
+  <circle cx="200" cy="420" r="130" fill="white" fill-opacity="0.12"/>
+  <text x="60" y="160" font-size="48" fill="white" font-family="Arial, Helvetica, sans-serif">智慧展厅 · 互动引导</text>
+  <text x="60" y="230" font-size="28" fill="white" font-family="Arial, Helvetica, sans-serif" opacity="0.9">项目 A</text>
+</svg>
