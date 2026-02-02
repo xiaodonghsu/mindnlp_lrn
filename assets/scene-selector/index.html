@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>场景业务介绍 - 旋转选择器</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <h1>场景业务介绍</h1>
+      <p>半圆旋转选择器 · 触摸拖拽 · 惯性旋转 · 场景联动</p>
+    </header>
+
+    <main class="scene-layout">
+      <section class="selector-panel">
+        <div class="selector-frame">
+          <div class="selector-arrow"></div>
+          <div class="selector-wheel" id="selectorWheel"></div>
+          <div class="selector-center">
+            <span>场景</span>
+          </div>
+        </div>
+        <div class="selector-hint">
+          <span>拖拽或点击切换</span>
+        </div>
+      </section>
+
+      <section class="content-panel">
+        <div class="content-header">
+          <span class="content-tag" id="contentTag">解决方案</span>
+          <h2 id="contentTitle">绿色双碳</h2>
+          <p id="contentSubtitle">为园区提供一体化节能减排与运营优化方案。</p>
+        </div>
+        <div class="content-body" id="contentBody"></div>
+        <button class="detail-button" id="detailButton">查看详情</button>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="detailModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-card">
+      <header>
+        <h3 id="modalTitle">场景详情</h3>
+        <button class="modal-close" data-close="true">×</button>
+      </header>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
