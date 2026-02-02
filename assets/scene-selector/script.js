@@ -101,6 +101,8 @@ let velocity = 0;
 let isDragging = false;
 let lastTime = 0;
 let activeIndex = 0;
+let minRotation = 0;
+let maxRotation = 0;
 
 const radius = 150;
 const center = { x: 160, y: 160 };
@@ -126,6 +128,8 @@ function initializeAngles() {
     const angle = start + (spread / (sceneData.length - 1)) * index;
     baseAngles[index] = angle;
   });
+  minRotation = -baseAngles[sceneData.length - 1];
+  maxRotation = -baseAngles[0];
 }
 
 function updateLayout() {
@@ -179,9 +183,13 @@ function updateContent(index) {
 }
 
 function rotateToIndex(index) {
-  rotation = -baseAngles[index];
+  rotation = clampRotation(-baseAngles[index]);
   velocity = 0;
   updateLayout();
+}
+
+function clampRotation(value) {
+  return Math.min(Math.max(value, minRotation), maxRotation);
 }
 
 function getPointerAngle(event) {
@@ -206,7 +214,7 @@ function onDrag(event) {
   const startRotation = Number(wheel.dataset.startRotation);
   const now = performance.now();
   const delta = currentAngle - startAngle;
-  rotation = startRotation + delta;
+  rotation = clampRotation(startRotation + delta);
   const dt = now - lastTime;
   velocity = (delta / dt) * 16;
   lastTime = now;
@@ -221,7 +229,10 @@ function endDrag() {
 
 function inertiaStep() {
   if (isDragging) return;
-  rotation += velocity;
+  rotation = clampRotation(rotation + velocity);
+  if (rotation === minRotation || rotation === maxRotation) {
+    velocity = 0;
+  }
   velocity *= 0.92;
   updateLayout();
   if (Math.abs(velocity) > 0.002) {
