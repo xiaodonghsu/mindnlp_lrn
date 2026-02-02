@@ -213,10 +213,10 @@ function onDrag(event) {
   const startAngle = Number(wheel.dataset.startAngle);
   const startRotation = Number(wheel.dataset.startRotation);
   const now = performance.now();
-  const delta = currentAngle - startAngle;
+  const delta = (currentAngle - startAngle) * 0.6;
   rotation = clampRotation(startRotation + delta);
   const dt = now - lastTime;
-  velocity = (delta / dt) * 16;
+  velocity = (delta / dt) * 8;
   lastTime = now;
   updateLayout();
 }
