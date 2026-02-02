@@ -104,8 +104,8 @@ let activeIndex = 0;
 let minRotation = 0;
 let maxRotation = 0;
 
-const radius = 150;
-const center = { x: 160, y: 160 };
+const radius = 240;
+const center = { x: 260, y: 260 };
 
 sceneData.forEach((scene, index) => {
   const item = document.createElement("div");

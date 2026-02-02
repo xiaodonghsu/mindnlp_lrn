@@ -64,9 +64,10 @@ body {
 
 .selector-frame {
   position: relative;
-  width: 320px;
-  height: 320px;
-  border-radius: 0 320px 320px 0;
+  width: 520px;
+  height: 520px;
+  margin-left: -260px;
+  border-radius: 0 520px 520px 0;
   border: 1px solid rgba(86, 140, 255, 0.4);
   background: radial-gradient(circle at left, rgba(32, 98, 255, 0.3), rgba(5, 18, 45, 0.8));
   overflow: hidden;
@@ -81,10 +82,10 @@ body {
 
 .selector-item {
   position: absolute;
-  left: 160px;
+  left: 260px;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 140px;
+  width: 160px;
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid rgba(95, 170, 255, 0.5);
@@ -107,7 +108,7 @@ body {
 
 .selector-arrow {
   position: absolute;
-  left: 310px;
+  left: 500px;
   top: 50%;
   width: 0;
   height: 0;
@@ -120,7 +121,7 @@ body {
 
 .selector-center {
   position: absolute;
-  left: 32px;
+  left: 60px;
   top: 50%;
   width: 92px;
   height: 92px;
@@ -283,15 +284,16 @@ body {
   }
 
   .selector-frame {
-    width: 260px;
-    height: 260px;
+    width: 380px;
+    height: 380px;
+    margin-left: -200px;
   }
 
   .selector-item {
-    width: 120px;
+    width: 140px;
   }
 
   .selector-arrow {
-    left: 250px;
+    left: 360px;
   }
 }
